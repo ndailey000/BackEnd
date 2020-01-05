@@ -22,9 +22,9 @@ function find() {
       .select('id', 'username')
       .where(filter);
   }
-  function add(user) {
+  function add(admin) {
     return db('admins')
-      .insert(user, 'id')
+      .insert(admin, 'id')
       .then(ids => {
         const [id] = ids;
         return findById(id);
