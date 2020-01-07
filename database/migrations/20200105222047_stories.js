@@ -4,7 +4,13 @@ exports.up = function(knex) {
       stories
       .increments();
       stories
-      .string('Name', 128 varchar)
+      .string('name', 128)
+      .unique()
+      .notNullable();
+      stories
+      .text('story', 500)
+      stories
+      .text('quote', 255)
   })
 };
 
