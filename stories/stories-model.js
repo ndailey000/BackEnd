@@ -1,7 +1,6 @@
 const knex = require('knex');
 const config = require('../knexfile.js');
 const db = knex(config.development);
-// add knex db and err-thang still 
 
 
 module.exports = { 
@@ -15,7 +14,7 @@ module.exports = {
 
 
 function find() {
-    return db('stories').select('id', 'username');
+    return db('stories').select('id','name');
   }
   function findBy(filter) {
     return db('stories')

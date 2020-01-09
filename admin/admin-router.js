@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 
-router.get('/', (req, res) => {
+router.get('/login', (req, res) => {
     Admins.find()
       .then(admins => {
         res.json(admins);
